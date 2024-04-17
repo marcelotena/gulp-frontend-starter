@@ -1,0 +1,41 @@
+{
+  "name": "gulp-frontend-starter",
+  "version": "1.0.0",
+  "description": "Front-end boilerplate with: Gulp 5, Babel, Sass, BrowserSync and some utility tasks: CSS \"clean\" with gulp-purgecss to remove unused classes and \"imgmin\" to optimize images (JPG, PNG or GIF, SVG can also be configured, [see documentation](https://www.npmjs.com/package/gulp-imagemin)).",
+  "main": "index.js",
+  "type": "module",
+  "browserslist": [
+    "> 0.25%",
+    "not dead"
+  ],
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelotena/gulp-frontend-starter.git"
+  },
+  "author": "Marcelo Tena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelotena/gulp-frontend-starter/issues"
+  },
+  "homepage": "https://github.com/marcelotena/gulp-frontend-starter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/register": "^7.23.7",
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.75.0"
+  }
+}

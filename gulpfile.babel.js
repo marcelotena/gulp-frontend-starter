@@ -88,7 +88,7 @@ gulp.task('js', () => {
 // --------------------------------------------------------------------
 
 gulp.task('imgmin', () => {
-    return gulp.src('./src/img/*')
+    return gulp.src('./src/img/*', {encoding: false})
         .pipe(plumber())
         .pipe(imagemin([
             gifsicle({interlaced: true}),

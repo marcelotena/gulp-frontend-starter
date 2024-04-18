@@ -16,7 +16,7 @@ import autoprefixer from 'gulp-autoprefixer'
 import clean from 'gulp-purgecss'
 
 // Image optimization
-import imagemin from 'gulp-imagemin'
+import {default as imagemin, gifsicle, mozjpeg, optipng} from 'gulp-imagemin'
 
 // Browser sync
 import { init as server, stream, reload } from 'browser-sync'
@@ -91,9 +91,9 @@ gulp.task('imgmin', () => {
     return gulp.src('./src/img/*')
         .pipe(plumber())
         .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 60, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5})
+            gifsicle({interlaced: true}),
+            mozjpeg({quality: 60, progressive: true}),
+            optipng({optimizationLevel: 5})
         ]))
         .pipe(gulp.dest('./dist/img'));
 })

@@ -1,14 +1,14 @@
 # Front-end starter project with Gulp task runner #
 
-Front-end boilerplate with: Gulp 5, Babel, Sass, BrowserSync and some utility tasks: CSS "clean" with gulp-purgecss to remove unused classes and "imgmin" to optimize images (JPG, PNG or GIF, SVG can also be configured, [see documentation](https://www.npmjs.com/package/gulp-imagemin)).
+Front-end boilerplate with: Gulp 4, Babel, Sass, BrowserSync and some utility tasks: CSS "clean" with gulp-purgecss to remove unused classes and "imgmin" to optimize images (JPG, PNG or GIF, SVG can also be configured, [see documentation](https://www.npmjs.com/package/gulp-imagemin)).
 
 JS task features: Babel transpiler, sourcemap and Terser to compress/uglify.
 SASS task features: SASS transpiler, sourcemap and autoprefixer.
 
 ### Development dependencies ###
 
-* Global: node 18.10.0 (+NPM 8.19.2)
-* gulp: ^5.0.0
+* Global: node 21.7.0 (+NPM 10.5.0)
+* gulp: ^4.0.2
 * browser-sync: ^3.0.2
 * gulp-sourcemaps: ^3.0.0
 * gulp-imagemin": "^9.0.0

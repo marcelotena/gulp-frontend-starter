@@ -88,7 +88,7 @@ gulp.task('js', () => {
 // --------------------------------------------------------------------
 
 gulp.task('imgmin', () => {
-    return gulp.src('./src/img/*', {debug: true})
+    return gulp.src('./src/img/*')
         .pipe(plumber())
         .pipe(imagemin([
             gifsicle({interlaced: true}),
@@ -96,7 +96,7 @@ gulp.task('imgmin', () => {
             optipng({optimizationLevel: 5})
         ]))
         .pipe(gulp.dest('./dist/img'));
-})
+});
 
 
 // --------------------------------------------------------------------

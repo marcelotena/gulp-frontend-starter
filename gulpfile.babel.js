@@ -5,6 +5,8 @@ import babel from 'gulp-babel'
 import terser from 'gulp-terser'
 import rename from 'gulp-rename'
 import sourcemaps from 'gulp-sourcemaps'
+import header from 'gulp-header'
+import packageFile from './package.json' with { type: "json" }
 
 // SASS
 import * as dartSass from 'sass'
@@ -71,10 +73,23 @@ gulp.task('clean', () => {
 // Task: JS
 // --------------------------------------------------------------------
 
+var banner = [
+    '/*!\n' +
+    ' * <%= package.name %>\n' +
+    ' * <%= package.title %>\n' +
+    ' * <%= package.url %>\n' +
+    ' * @author <%= package.author %>\n' +
+    ' * @version <%= package.version %>\n' +
+    ' * Copyright ' + new Date().getFullYear() + '. <%= package.license %> licensed.\n' +
+    ' */',
+    '\n'
+].join('');
+
 gulp.task('js', () => {
     return gulp.src(jsSourceDir + '/*.js')
         .pipe(plumber())
         .pipe(sourcemaps.init())
+        .pipe(header(banner, { package : packageFile }))
         .pipe(babel())
         .pipe(gulp.dest('dist/js'))
         .pipe(terser())
